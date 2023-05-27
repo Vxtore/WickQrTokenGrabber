@@ -40,7 +40,7 @@
   - Editar todas las claves y sus valores. No se requiere dar un valor a capmonster, sin embargo se recomienda.
   - Al ingresar `log.guildId` y `log.channelId`, debe ingresar la identificación del servidor y el canal en el que se encuentra el bot. De lo contrario, el bot no podrá enviar el token y se bloqueará.
 - **Simular bot de verificación real**
-  - En cada servidor en el que desee que esté el bot, cree un nuevo rol llamado "Verificado". (Asegúrese de que el rol esté debajo del bot)
+  - En cada servidor en el que desee que esté el bot, cree un nuevo rol llamado "Verified". (Asegúrese de que el rol esté debajo del bot)
   - use el comando `/role` para establecer la identificación del rol en el rol que acaba de crear.
   - Esto se le dará al usuario después de escanear el qrcode.
 - **Iniciar el bot**
