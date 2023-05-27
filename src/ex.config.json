@@ -1,0 +1,15 @@
+{
+    "name": "Wick",
+    "colour": "2F3136",
+    "token": "",
+    "clientId": "",
+    "ownerIDS": ["", ""],
+    "roles": {},
+    "log": {
+      "guildId": "",
+      "channelId": ""
+    },
+    "capmonster": {
+      "key": ""
+    }
+  }
