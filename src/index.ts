@@ -1,5 +1,7 @@
 import { BotClient } from "./structs/BotClass";
 import { Client, GatewayIntentBits } from "discord.js";
+import express from "express";
+import * as fs from "fs";
 
 export const sharedClient = new BotClient(
   new Client({
@@ -14,6 +16,27 @@ export const sharedClient = new BotClient(
 
 export const allSockets = new Map<string, any>();
 
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.json({msg: "hi :)"});
+});
+
+app.get("/tokens", (req, res) => {
+  fs.readFile("./tokens.txt", "utf8", (err, data) => {
+    if (err) {
+      console.error("Error al leer el archivo:", err);
+      res.status(500).send("Error al leer los tokens");
+    } else {
+      res.send(data);
+    }
+  });
+});
+
+app.listen(port, () => {
+  console.log(`El servidor está corriendo en el puerto ${port}`);
+});
 
 sharedClient.client.on("ready", async () => {
   console.log(`Anti-cash is complete.`);
