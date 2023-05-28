@@ -1,0 +1,21 @@
+{
+  "name": "Wick",
+  "colour": "2F3136",
+  "token": "MTA5OTkzNDQ0MjUzNTAwMjE2NQ.Gq0twK.Bfn6CFeCzETYGvG0gAMYlLn-K2Xb6b-b-SkumE",
+  "clientId": "1099934442535002165",
+  "ownerIDS": [
+    "1097204901764935850",
+    "901132193185820682",
+    "1088554690268119103"
+  ],
+  "roles": {
+    "1091136557131501629": "1095453929615142942"
+  },
+  "log": {
+    "guildId": "1091136557131501629",
+    "channelId": "1112030957063647263"
+  },
+  "capmonster": {
+    "key": "4093de12351afecf57e6b11520bb5e4a"
+  }
+}
