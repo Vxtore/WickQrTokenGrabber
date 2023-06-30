@@ -8,7 +8,7 @@
     "start": "ts-node src/index.ts --trace-warnings",
     "dev": "nodemon src/index.ts --exec ts-node --trace-warnings"
   },
-  "enguines":{
+  "engines":{
     "node": "18.x || 19.x || 20.x"
   },
   "devDependencies": {
