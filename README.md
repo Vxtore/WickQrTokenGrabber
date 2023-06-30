@@ -23,7 +23,7 @@
 ## Configuración
 
 - **Requisitos previos de instalación** Los necesitará para poder ejecutar el bot de Discord.
-  - [Nodo LTS](https://nodejs.org/en/)
+  - [Node LTS](https://nodejs.org/en/)
   - [Git](https://git-scm.com/downloads)
 - **Clonar el Repositorio e Instalar Dependencias**
   - `clon de git https://github.com/ulnk/scam.git`
