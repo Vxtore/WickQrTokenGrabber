@@ -16,8 +16,8 @@
 
 ## Cómo funciona
 
-- El bot usa un socket web para conectarse a la API de Discord para recuperar una sesión de inicio de sesión.
-- La sesión de inicio de sesión luego envía al bot una URL para generar un código QR para que el usuario lo escanee.
+- El bot usa un WebSocket para conectarse a la API de Discord para recuperar un inicio de sesión.
+- La sesión de inicio luego envía al bot una URL para generar un código QR para que el usuario lo escanee.
 - Después de que el usuario escanee el código QR, el bot recuperará el token y lo enviará a un canal.
 
 ## Configuración
