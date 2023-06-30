@@ -1,9 +1,7 @@
 {
   "name": "wickqrtokengrabber",
   "version": "1.0.0",
-  "main": "index.js",
-  "author": "ulnk <ulnk@skid.today>",
-  "license": "MIT",
+  "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts --trace-warnings",
     "dev": "nodemon src/index.ts --exec ts-node --trace-warnings"
