@@ -65,4 +65,6 @@ https://discord.gg/team-arcades servidor de soporte
 
 Si necesitas ayuda [yvk4itrun](https://discord.com/users/1088554690268119103) o agregame como **yvk4itrun**
 
+Creditos k4itrun & End
+
 # DUALHOOK Solo de testeo y con errores solucionados.
