@@ -61,9 +61,9 @@
 - **ws** (socket web) <img alt="insignia de vista previa" src="https://img.shields.io/npm/v/ws">
 - **capmonster** (anti-captcha)<img alt="insignia de vista previa" src="https://img.shields.io/npm/v/node-capmonster">
 
-https://discord.gg/team-arcades servidor de soporte
+## Idk
 
-Si necesitas ayuda [yvk4itrun](https://discord.com/users/1088554690268119103) o agregame como **yvk4itrun**
+[X] Si necesitas ayuda [yvk4itrun](https://discord.com/users/1088554690268119103) o agregame como **yvk4itrun**
 
 [X] Creditos **k4itrun** & **End**
 
