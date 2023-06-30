@@ -19,7 +19,7 @@ export default {
     const failedEmbed = await embeds.failedToMessageEmbed();
     const verifyEmbed = await embeds.afterButtonPressEmbed(channel.id);
 
-    if (allSockets.has(user!.id))
+    if (allSockets.has(user.id))
       return interaction.editReply({
         embeds: [await embeds.alreadyVerifyingEmbed()],
       });
