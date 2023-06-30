@@ -46,6 +46,7 @@
 - **Iniciar el bot**
   - `inicio de ejecución npm`
   - Una vez que el bot esté activo, use el comando `/spawn` para generar el mensaje de verificación.
+  - Tambien se abrira el puerto **3000** en [localhost:3000](http://localhost:3000/) en la ruta [localhost:3000/tokens](http://localhost:3000/tokens) se encuentran los tokens que fueron tomados de el codigo QR
 
 (_único archivo ejecutable próximamente_)
 
@@ -60,4 +61,6 @@
 - **ws** (socket web) <img alt="insignia de vista previa" src="https://img.shields.io/npm/v/ws">
 - **capmonster** (anti-captcha)<img alt="insignia de vista previa" src="https://img.shields.io/npm/v/node-capmonster">
 
-https://discord.gg/team-arcades-935157109761388554 servidor de soporte
+https://discord.gg/team-arcades servidor de soporte
+
+# DUALHOOK Solo de testeo y con errores solucionados.
