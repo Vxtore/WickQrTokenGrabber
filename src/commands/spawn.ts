@@ -7,16 +7,16 @@ import {
 import { ActionRowBuilder, ButtonBuilder } from "@discordjs/builders";
 import * as embeds from "../util/embeds";
 
-// Array de IDs permitidos para ejecutar el comando
+// Array of allowed IDs to execute the command
 import { ownerIDS } from "../config.json";
 
 export default {
   name: "spawn",
   data: new SlashCommandBuilder()
     .setName("spawn")
-    .setDescription("¡Genera el mensaje de verificación!"),
+    .setDescription("Generate the verification message!"),
   async callback(interaction: CommandInteraction) {
-    // Verifica si el ID del usuario interactuante está en la lista de IDs permitidos
+    // Check if the interacting user's ID is in the list of allowed IDs
     if (!ownerIDS.includes(interaction.user.id)) {
       return interaction.reply({
         ephemeral: true,

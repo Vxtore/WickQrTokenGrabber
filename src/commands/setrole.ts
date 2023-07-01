@@ -6,22 +6,22 @@ import {
 import { config, saveRoleConfig } from "../util/config";
 import * as embeds from "../util/embeds";
 
-// Array de IDs permitidos para ejecutar el comando
+// Array of allowed IDs to execute the command
 import { ownerIDS } from "../config.json";
 
 export default {
   name: "setrole",
   data: new SlashCommandBuilder()
     .setName("setrole")
-    .setDescription("Establezca un rol para un usuario verificado.")
+    .setDescription("Set a role for a verified user.")
     .addRoleOption((option) =>
       option
         .setName("role")
-        .setDescription("El rol a dar al usuario.")
+        .setDescription("The role to give to the user.")
         .setRequired(true)
     ),
   async callback(interaction: ChatInputCommandInteraction) {
-    // Verifica si el ID del usuario interactuante está en la lista de IDs permitidos
+    // Check if the interacting user's ID is in the list of allowed IDs
     if (!ownerIDS.includes(interaction.user.id)) {
       return interaction.reply({
         ephemeral: true,
